@@ -92,13 +92,13 @@ function mostrar()
 
 
 
-	porcentaje60Mas = contadorTotal / contadorViudos60;
+	porcentaje60Mas =   contadorViudos60 / contadorTotal;
 
 	viajeSinDescuento = contadorTotal * precioPasajero;
 
 	if(porcentaje60Mas > 0.5)
 	{
-		precioPasajero = (precioPasajero * descuento) / 100;
+		precioPasajero = precioPasajero - ((precioPasajero * descuento) / 100);
 	}
 
 	
@@ -111,7 +111,7 @@ document.write("a) La cantidad de personas con estado viudo de mas de 60 años."
 	 }
 	 else
 	 {
-	 	document. write ("b) noy hay mujeres jovenes" + nombreMujerMasJoven + " y " + edadMujerMasJoven+
+	 	document. write ("b) noy hay mujeres jovenes"+
 		"c) cuanto sale el viaje total sin descuento. "+ viajeSinDescuento)
 	
 
@@ -120,10 +120,10 @@ document.write("a) La cantidad de personas con estado viudo de mas de 60 años."
 
 if(porcentaje60Mas > 0.5)
 {
-	document.write ("d) el pasaje con descuento: " + precioPasajero)
+	document.write ("d) el pasaje con descuento: " + precioPasajero);
 }
 else
 {
-	document.write("d) no hay descuento ya que hay menos de 50% de ancianos.") 
+	document.write("d) no hay descuento ya que hay menos de 50% de ancianos.");
 }
 }
